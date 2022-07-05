@@ -1,0 +1,20 @@
+{% extends "entregaTeves/padre.html" %}
+{% load static %}
+{% block section_name %}
+
+<h3> Directo Tecnico </h3>
+
+{% endblock %}
+
+{% block contenidoQueCambia %}
+<h3> Seccion de Tecnico </h3>
+
+<form method = "POST"> {% csrf_token %}
+Estas seguro de eliminar al Directo Tecnico {{object}}
+<input type = "submit" value = "SI"/>
+
+</form>
+
+
+                       
+{% endblock %}

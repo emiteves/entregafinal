@@ -1,0 +1,28 @@
+{% extends "entregaTeves/padre.html" %}
+{% load static %}
+{% block section_name %}
+<nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+    <a class="navbar-brand" href="{% url 'futbolistaFormulario' %}">Cargar Futbolista</a>
+    <a class="navbar-brand" href="{% url 'lista_futbolistas' %}">Edicion de Futbolistas</a>
+</div>
+    <div class="container">
+    <a class="navbar-brand" href="{% url 'tecnicoFormulario' %}">Cargar Director Tecnico</a>
+    <a class="navbar-brand" href="{% url 'lista_tecnicos' %}">Edicion de Directores Tecnicos</a>
+</div>
+    <div class="container">
+    <a class="navbar-brand" href="{% url 'seleccionFormulario' %}">Cargar Seleccion</a>
+    <a class="navbar-brand" href="{% url 'lista_selecciones' %}">Edicion de Paises Participantes</a>
+</div>
+
+</ul>
+</nav>
+
+{% endblock %}
+{% block contenidoQueCambia %}
+
+
+
+  
+                          
+{% endblock %}

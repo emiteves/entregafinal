@@ -1,0 +1,34 @@
+{% extends "entregaTeves/padre.html" %}
+{% load static %}
+{% block section_name %}
+
+<h1> Listado total de Futbolistas </h1>
+
+{% endblock %}
+{% block contenidoQueCambia %}
+<h3> Edicion: </h3>
+
+<button>
+  <a href="{% url 'futbolista_crear' %}">Crear</a>
+</button>
+
+
+{% for futbolista in object_list %}
+
+<li> {{futbolista.pais}} ({{futbolista.dorsal}}) - {{futbolista.apellido}} {{futbolista.nombre}} </li>
+<button>
+   <a href="{% url 'futbolista_detalle' futbolista.id %}">Detalle</a>
+ </button>
+ <button>
+   <a href="{% url 'futbolista_edicion' futbolista.id %}">Editar</a>
+ </button>
+ <button>
+   <a href="{% url 'futbolista_borrar' futbolista.id %}">Borrar</a>
+ </button>
+
+ <br>
+ <br>
+
+
+{% endfor %}     
+{% endblock %}

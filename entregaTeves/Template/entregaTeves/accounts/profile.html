@@ -1,0 +1,19 @@
+{% extends "entregaTeves/padre.html" %}
+{% load static %}
+{% block section_name %}
+
+<h1> Perfil de usuario </h1>
+
+{% endblock %}
+
+{% block contenidoQueCambia %}
+<h3> Modificar el perfil de {{usuario}} </h3>
+
+<form action="{% url 'accounts/profile' %}" method= "POST"> {% csrf_token %}
+    <table>
+        {{formulario.as_table}}
+    </table>
+    <input type = "submit" value = "Editar Perfil">
+</form>
+                         
+{% endblock %}

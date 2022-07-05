@@ -1,0 +1,17 @@
+{% extends "entregaTeves/padre.html" %}
+{% load static %}
+{% block section_name %}
+
+<h1> Login </h1>
+
+{% endblock %}
+
+{% block contenidoQueCambia %}
+
+<form method = "POST"> {% csrf_token %}
+Ingrese usuario y contraseña {{form.as_p}}
+<button type = "submit" > Inicio Sesion </button>
+
+</form>
+                       
+{% endblock %}

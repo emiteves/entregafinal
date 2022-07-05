@@ -1,0 +1,45 @@
+{% extends "entregaTeves/padre.html" %}
+{% load static %}
+{% block section_name %}
+
+<h1> {{pais}} </h1>
+                            
+{% endblock %}
+
+{% block contenidoQueCambia %}
+
+
+
+
+{%if selecciones %}
+
+    {% for seleccion in selecciones %}
+    <li> GRUPO {{seleccion.grupo}} </li>
+    <br>
+    {%endfor%}
+    {% endif%}
+
+{%if tecnicos %}
+
+    {% for tecnico in tecnicos %}
+    <li> DT: {{tecnico.apellido}} {{tecnico.nombre}} </li>
+    <br>
+    {%endfor%}
+    {% endif%}
+
+{%if futbolistas %}
+
+    {% for futbolista in futbolistas %}
+    <li> ({{futbolista.dorsal}}) {{futbolista.nombre}} {{futbolista.apellido}} </li>
+    <br>
+    {%endfor%}
+    {% endif%}
+
+
+    
+    {%if pais == False %} 
+    <h2>   Aun no se ha registrado informacion de su Pais</h2>
+    {% endif %}
+  
+
+{% endblock %}

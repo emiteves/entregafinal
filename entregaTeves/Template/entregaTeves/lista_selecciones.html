@@ -1,0 +1,34 @@
+{% extends "entregaTeves/padre.html" %}
+{% load static %}
+{% block section_name %}
+
+<h1> Listado total de Paises participantes </h1>
+
+{% endblock %}
+{% block contenidoQueCambia %}
+<h3> Edicion: </h3>
+
+<button>
+  <a href="{% url 'seleccion_crear' %}">Crear</a>
+</button>
+
+
+{% for seleccion in object_list %}
+
+<li> {{seleccion.pais}} - {{seleccion.grupo}} </li>
+<button>
+   <a href="{% url 'seleccion_detalle' seleccion.id %}">Detalle</a>
+ </button>
+ <button>
+   <a href="{% url 'seleccion_edicion' seleccion.id %}">Editar</a>
+ </button>
+ <button>
+   <a href="{% url 'seleccion_borrar' seleccion.id %}">Borrar</a>
+ </button>
+
+ <br>
+ <br>
+
+
+{% endfor %}     
+{% endblock %}

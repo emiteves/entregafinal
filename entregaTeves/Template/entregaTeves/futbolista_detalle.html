@@ -1,0 +1,24 @@
+{% extends "entregaTeves/padre.html" %}
+{% load static %}
+{% block section_name %}
+
+<h1> Futbolista </h1>
+
+{% endblock %}
+
+{% block contenidoQueCambia %}
+<h3> Detalle del Jugador </h3>
+
+<p> NOMBRE: <i>{{futbolistas.nombre}}</i></p>
+<p> APELLIDO: <i>{{futbolistas.apellido}}</i></p>
+<p> DORSAL: <i>{{futbolistas.dorsal}}</i></p>
+<p> PAIS: <i>{{futbolistas.pais}}</i></p>
+
+
+<p> 
+
+    <a href = "{% url 'lista_futbolistas' %}" > Volver a la lista de Futbolistas</a>
+
+</p>
+                          
+{% endblock %}

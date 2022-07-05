@@ -1,0 +1,23 @@
+{% extends "entregaTeves/padre.html" %}
+{% load static %}
+{% block section_name %}
+
+<h1> Directores Tecnicos </h1>
+
+{% endblock %}
+
+{% block contenidoQueCambia %}
+<h3> Informacion del DT </h3>
+
+<p> NOMBRE: <i>{{tecnicos.nombre}}</i></p>
+<p> APELLIDO: <i>{{tecnicos.apellido}}</i></p>
+<p> PAIS: <i>{{tecnicos.pais}}</i></p>
+
+
+<p> 
+
+    <a href = "{% url 'lista_tecnicos' %}" > Volver a la lista de Tecnicos</a>
+
+</p>
+                          
+{% endblock %}

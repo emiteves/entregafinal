@@ -1,0 +1,20 @@
+{% extends "entregaTeves/padre.html" %}
+{% load static %}
+{% block section_name %}
+
+<h1> Selecciones </h1>
+
+{% endblock %}
+
+{% block contenidoQueCambia %}
+<h3> Pais Participante </h3>
+
+<form method = "POST"> {% csrf_token %}
+<h3> Informacion del pais </h3>
+{{form.as_p}}
+<input type = "submit" value = "Enviar"/>
+
+</form>
+
+                       
+{% endblock %}

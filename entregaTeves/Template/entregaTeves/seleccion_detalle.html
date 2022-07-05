@@ -1,0 +1,23 @@
+{% extends "entregaTeves/padre.html" %}
+{% load static %}
+{% block section_name %}
+
+<h3> Selecciones </h3>
+
+{% endblock %}
+
+{% block contenidoQueCambia %}
+<h3> Detalle del Pais participante </h3>
+
+
+<p> PAIS: <i>{{selecciones.pais}}</i></p>
+<p> GRUPO: <i>{{selecciones.grupo}}</i></p>
+
+
+<p> 
+
+    <a href = "{% url 'lista_selecciones' %}" > Volver a la lista de Selecciones</a>
+
+</p>
+                          
+{% endblock %}

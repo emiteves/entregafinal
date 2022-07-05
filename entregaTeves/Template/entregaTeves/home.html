@@ -1,0 +1,50 @@
+{% extends "entregaTeves/padre.html" %}
+{% load static %}
+{% block section_name %}         
+             
+<p>
+<h1> {{mensaje}}</h1>
+</p>
+
+<p>
+
+<div class="container px-2 px-lg-3 text-center">
+       
+    <h2 class="mx-auto mb-5">
+
+            
+      
+       <b>¡Aqui encontrarás toda la información del Mundial Qatar 2022!</b> 
+        
+    </h2>
+    <a class="btn btn-primary btn-xl" href="{% url 'futbolistas' %}">Futbolistas</a>
+    <a class="btn btn-primary btn-xl" href="{% url 'selecciones' %}">Selecciones</a>
+    <a class="btn btn-primary btn-xl" href="{% url 'tecnicos' %}">Directores Tecnicos</a>
+</div>
+
+</p>
+
+{% endblock%}
+
+
+{% block contenidoQueCambia %}
+
+
+
+<div class="container ">
+<p> Busca información de tu país</p>
+            <form action="{% url 'buscar' %}" method = "GET"> 
+                       <div id="custom-search-input">
+                    <div class="input group col-md-4">
+                        <input type="text" name="pais" placeholder="PAIS" id="pais">
+                        <input type="submit" value="Buscar"> 
+                        <span class="input-group-list">
+                            <i class="icon icon-search"></i>
+                                                   </span>
+                    </div>
+                    </div>
+                </div>
+            </form>
+
+
+{% endblock %}

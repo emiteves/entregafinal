@@ -1,0 +1,22 @@
+{% extends "entregaTeves/padre.html" %}
+{% load static %}
+{% block section_name %}
+
+<h3> Directores Tecnicos </h3>
+
+{% endblock %}
+
+{% block contenidoQueCambia %}
+
+{% for f in Tecnicos %}
+    
+<li> {{f.pais}} - {{f.nombre}} {{f.apellido}}</li>  
+
+{%endfor %}             
+
+<p> 
+    <a class="btn btn-primary btn-xl" href="{% url 'futbolistas' %}">Futbolistas</a>
+    <a class="btn btn-primary btn-xl" href="{% url 'selecciones' %}">Selecciones</a>
+</p>
+
+{% endblock %}

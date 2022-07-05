@@ -1,0 +1,24 @@
+{% extends "entregaTeves/padre.html" %}
+{% load static %}
+{% block section_name %}
+
+<h3> Selecciones </h3>
+
+{% endblock %}
+
+{% block contenidoQueCambia %}
+
+
+{% for f in Selecciones %}
+    
+<li>Grupo {{f.grupo}} - {{f.pais}}</li>  
+
+{%endfor %}             
+         
+<p> 
+    <a class="btn btn-primary btn-xl" href="{% url 'futbolistas' %}">Futbolistas</a>
+    <a class="btn btn-primary btn-xl" href="{% url 'tecnicos' %}">Directores Tecnicos</a>
+</p>
+    
+
+{% endblock %}

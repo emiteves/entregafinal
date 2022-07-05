@@ -1,0 +1,34 @@
+{% extends "entregaTeves/padre.html" %}
+{% load static %}
+{% block section_name %}
+
+<h1> Listado total de Directores Tecnicos </h1>
+
+{% endblock %}
+{% block contenidoQueCambia %}
+<h3> Edicion: </h3>
+
+<button>
+  <a href="{% url 'tecnico_crear' %}">Crear</a>
+</button>
+
+
+{% for tecnico in object_list %}
+
+<li> {{tecnico.pais}} - {{tecnico.apellido}} {{tecnico.nombre}} </li>
+<button>
+   <a href="{% url 'tecnico_detalle' tecnico.id %}">Detalle</a>
+ </button>
+ <button>
+   <a href="{% url 'tecnico_edicion' tecnico.id %}">Editar</a>
+ </button>
+ <button>
+   <a href="{% url 'tecnico_borrar' tecnico.id %}">Borrar</a>
+ </button>
+
+ <br>
+ <br>
+
+
+{% endfor %}     
+{% endblock %}
